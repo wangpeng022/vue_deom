@@ -5,7 +5,7 @@
   "author": "wangpeng <wangpeng022@sina.cn>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress  --port 8081 --host 192.168.100.81 --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress  --port 8081 --host 0.0.0.0 --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Col span="12">
-            <Card style="margin-right:20px">
+            <Card style="margin:20px 0 0 20px">
                 <Form :model="setting" :label-width="100">
                     <FormItem label="自动切换">
                         <i-switch v-model="setting.autoplay">
@@ -63,30 +63,36 @@
             </Card>
         </Col>
         <Col span="12">
-            <Card span="5">
+            <Card style="margin:20px 0 0 20px">
                 <Collapse v-model="value1">
                 <Panel name="1">
-                    史蒂夫·乔布斯
-                    <p slot="content">史蒂夫·乔布斯（Steve Jobs），1955年2月24日生于美国加利福尼亚州旧金山，美国发明家、企业家、美国苹果公司联合创办人。</p>
+                    故障报警
+                    <p slot="content">无</p>
                 </Panel>
                 <Panel name="2">
-                    斯蒂夫·盖瑞·沃兹尼亚克
-                    <p slot="content">斯蒂夫·盖瑞·沃兹尼亚克（Stephen Gary Wozniak），美国电脑工程师，曾与史蒂夫·乔布斯合伙创立苹果电脑（今之苹果公司）。斯蒂夫·盖瑞·沃兹尼亚克曾就读于美国科罗拉多大学，后转学入美国著名高等学府加州大学伯克利分校（UC Berkeley）并获得电机工程及计算机（EECS）本科学位（1987年）。</p>
+                    运行策略
+                    <p slot="content">冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制冷机室内负荷反馈控制</p>
                 </Panel>
                 <Panel name="3">
-                    乔纳森·伊夫
-                    <p slot="content">乔纳森·伊夫是一位工业设计师，现任Apple公司设计师兼资深副总裁，英国爵士。他曾参与设计了iPod，iMac，iPhone，iPad等众多苹果产品。除了乔布斯，他是对苹果那些著名的产品最有影响力的人。</p>
+                    关键指标
+                    <p slot="content">冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组</p>
                 </Panel>
             </Collapse>
             </Card>
         </Col>
+        <Col span="12">
+            <Card style="margin:20px 0 0 20px">
+                写点什么呢
+            </Card>
+        </Col>
+        <BackTop></BackTop>
     </div>
 </template>
 <script>
     export default {
         data () {
             return {
-                value1: [1,2],
+                value1: [1,2,3],
                 value3: 0,
                 setting: {
                     autoplay: false,
@@ -103,7 +109,6 @@
 <style scoped>
     .blue,.red,.green,.yellow{
         height: 200px;
-        /* width: 400px; */
     }
     .blue{
         background: lightblue;

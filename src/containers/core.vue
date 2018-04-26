@@ -1,5 +1,5 @@
 <template>
-    <div id="coolerCore" v-cloak>
+    <div id="coolerCore" style="margin:20px 0 0 20px">
             <div class="pages">
                 <div class="page" v-for="(item,index) in systemList"
                 :key="item.systemCode"
