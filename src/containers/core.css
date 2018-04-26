@@ -1,0 +1,208 @@
+/* 公共样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body{
+    user-select: none;
+    width: 100%;
+    height: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+body ::-webkit-scrollbar { width: 10px; height: 10px; }
+body ::-webkit-scrollbar-track { background-color: #fff; -webkit-border-radius: 8px; }
+body ::-webkit-scrollbar-thumb { -webkit-border-radius: 5px; background: #e6e6e6; border: none; }
+body ::-webkit-scrollbar-thumb:vertical:hover { background-color: #a6a6a6; border: none; }
+body ::-webkit-scrollbar-thumb:hover { background-color: #a6a6a6; border: none; }
+
+[v-cloak]{
+    display:none;
+}
+/* 默认样式 */
+#cpeco_center{
+    overflow: hidden;
+    /* width: 1900px; */
+    /* height: 1016px; */
+    height: calc(100% - 14px);
+    min-height: 600px;
+    width: calc(100% - 20px);
+    min-width: 900px;
+    padding: 14px 10px 0 10px;
+    background: #F0F3F6;
+}
+#coolerCore {
+    /* width: 1878px; */
+    width: 100%;
+    /* height: 996px; */
+    height: 100%;
+    border-radius: 6px;
+    padding: 10px;
+    border: 1px solid #D9E2E8;
+    font-family: MicrosoftYaHei-Bold;
+    color: #333333;
+    overflow-x: hidden;
+    background: #fff;
+}
+#coolerCore .pages{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-height: 150px;
+}
+#coolerCore .page {
+    position: relative;
+    /* width: 334px; */
+    /* height: 128px; */
+    padding: 10px;
+    margin: 9px;
+    cursor: pointer;
+    border-radius: 4px;
+    border: 1px solid #D9E2E8;
+}
+#coolerCore .page:hover{
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.12);
+}
+
+
+/* 每頁標題 */
+.page>header span:nth-child(1){
+    display: inline-block;
+    max-width: 200px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.pages>.page>header {
+    width: 320px;
+    height: 18px;
+    line-height: 18px;
+    font-family: MicrosoftYaHei-Bold;
+    font-size: 14px;
+    font-weight: 900;
+    color: #333333;
+    margin: 8px 6px 0 10px;
+}
+
+.page .page_content {
+    display: flex;
+    width: 336px;
+    /* height: 65px; */
+    padding: 10px 0 15px 0;
+    margin-top: 14px;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.page .page_content div {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.page .page_content div span:nth-child(1) {
+    flex-grow: 2;
+    font-family: 'ArialMT', 'Arial';
+    font-weight: 600;
+    font-style: normal;
+    font-size: 26px;
+    color: #a2a2a2;
+    justify-content: center;
+}
+.page .page_content .ee span:nth-child(1){
+    /* padding-top: 7px; */
+}
+.page .page_content .ee span:nth-child(2){
+    /* padding-bottom: 3px; */
+}
+.page .page_content div span:nth-child(2) {
+    flex-grow: 1;
+    font-family: 'PingFangSC-Regular', 'PingFang SC';
+    font-weight: 400;
+    font-size: 12px;
+    color: #a2a2a2;
+}
+
+ /* .page .cover.close {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin:  50px 10px 10px 10px;
+    width: 334px;
+    height: 90px;
+    background: rgba(171, 171, 171, 0.1);
+    z-index: 11;
+} */
+
+/* 默认样式--灰色 网络连接 */
+
+.page_content .online span:nth-child(1) {
+    height: 30px;
+    background: url("../../static/images/offline.png") center center no-repeat;
+}
+
+.page_content .state span:nth-child(1) {
+    height: 30px;
+    background: url("../../static/images/off.png") center center no-repeat;
+}
+.page_content .ee span:nth-child(1){
+    height: 30px;
+}
+
+
+/* 网络连接标识 */
+.page .online span:nth-child(1).online {
+    background: url("../../static/images/online.png") center center no-repeat;
+}
+
+
+/* 正常样式 绿色*/
+.page .page_content .state span:nth-child(1).normal {
+    background: url("../../static/images/normal.png") center center no-repeat;
+}
+
+.page .page_content .state span:nth-child(2).normal{
+    color: #00CC00;
+}
+
+
+/* 报警样式 */
+.page .page_content.bigErr {
+    background: rgba(255, 123, 123, 0.1);
+}
+.page .page_content.close {
+    background: rgba(171, 171, 171, 0.1);
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.page.bigErr{
+    border: 1px solid #FF7B7B!important;
+}
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.page .page_content .state span:nth-child(1).bigErr {
+    background: url("../../static/images/bigErr.png") center center no-repeat;
+}
+
+.page .page_content .state span:nth-child(2).bigErr{
+    color: #FF0000;
+}
+
+.page .page_content .ee .blue{
+    color: #0385D1;
+}
+.page .page_content .ee .green{
+    color: #0DBD72;
+}
+.page .page_content .ee .yellow{
+    color: #F8C130;
+}
+.page .page_content .ee .red{
+    color: #F2504F;
+}

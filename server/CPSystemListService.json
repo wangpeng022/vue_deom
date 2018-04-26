@@ -1,0 +1,76 @@
+[
+  {
+    "dataList": [
+      {
+        "alarmStatus": {
+          "status": 0,
+          "lastUpdateTime": "2018-04-18 18:13:53"
+        },
+        "projectCode": "3101140001",
+        "systemCode": 0,
+        "climateRegion": {
+          "name": "寒冷地区",
+          "code": "HLDQ"
+        },
+        "systemName": "广联达二期",
+        "projectName": "广联达二期"
+      },
+      {
+        "alarmStatus": {
+          "status": -1,
+          "lastUpdateTime": "2018-04-19 17:20:58"
+        },
+        "projectCode": "3101140002",
+        "systemCode": 1,
+        "climateRegion": {
+          "name": "寒冷地区",
+          "code": "HLDQ"
+        },
+        "systemName": "广电国际酒店",
+        "projectName": "广电国际酒店"
+      },
+      {
+        "alarmStatus": {
+          "status": -1,
+          "lastUpdateTime": "2018-04-19 17:20:58"
+        },
+        "projectCode": "3101140003",
+        "systemCode": 2,
+        "climateRegion": {
+          "name": "寒冷地区",
+          "code": "HLDQ"
+        },
+        "systemName": "将军大厦",
+        "projectName": "将军大厦"
+      },
+      {
+        "alarmStatus": {
+          "status": 0,
+          "lastUpdateTime": "2018-04-18 16:09:04"
+        },
+        "projectCode": "1101050103",
+        "systemCode": 3,
+        "climateRegion": {
+          "name": "寒冷地区",
+          "code": "HLDQ"
+        },
+        "systemName": "银河SOHO",
+        "projectName": "银河SOHO"
+      },
+      {
+        "alarmStatus": {
+          "status": -1,
+          "lastUpdateTime": "2018-04-19 17:20:58"
+        },
+        "projectCode": "4403050001",
+        "systemCode": 4,
+        "climateRegion": {
+          "name": "夏热冬暖地区",
+          "code": "XRDNDQ"
+        },
+        "systemName": "深圳中海意库",
+        "projectName": "深圳中海意库"
+      }
+    ]
+  }
+]

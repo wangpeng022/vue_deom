@@ -1,0 +1,17 @@
+[
+  {
+    "runStatus": {
+      "status": 1,
+      "lastUpdateTime": "2018-04-18 16:09:04"
+    },
+    "cop": {
+      "status": 1,
+      "lastUpdateTime": "2018-04-18 16:08:49",
+      "value": 5.5
+    },
+    "linkStatus": {
+      "status": 0,
+      "lastUpdateTime": "2018-04-18 16:08:48"
+    }
+  }
+]

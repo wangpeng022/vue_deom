@@ -5,11 +5,14 @@
   "author": "wangpeng <wangpeng022@sina.cn>",
   "private": true,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js --port 8081",
+    "dev": "webpack-dev-server --inline --progress  --port 8081 --host 192.168.100.81 --config build/webpack.dev.conf.js",
     "start": "npm run dev",
     "build": "node build/build.js"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "iview": "^2.13.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1"
