@@ -18,6 +18,10 @@
                         <Icon type="settings"></Icon>
                         <span>冷站冷站</span>
                     </MenuItem>
+                    <MenuItem name="note">
+                        <Icon type="ios-paper"></Icon>
+                        <span>工作日记</span>
+                    </MenuItem>
                 </Menu>
             </Sider>
             <Layout>

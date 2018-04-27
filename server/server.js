@@ -11,7 +11,7 @@ app.use(session({
 app.use(bodyParser.json());
 app.use(function (req, res, next) {
     //允许的来源
-    res.header('Access-Control-Allow-Origin', 'http://192.168.100.81:8081');
+    res.header('Access-Control-Allow-Origin', '*');
     //允许客户端请求的方法
     res.header('Access-Control-Allow-Methods', 'GET,POST,OPTIONS,PUT,DELETE');
     //允许客户端发送的请求头
