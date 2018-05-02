@@ -75,6 +75,19 @@
                 </Panel>
                 <Panel name="3">
                     关键指标
+                    <Dropdown style="float:right;marginRight:20px">
+                        <a href="javascript:void(0)">
+                            下拉菜单
+                            <Icon type="arrow-down-b"></Icon>
+                        </a>
+                        <DropdownMenu slot="list" @click.self='aa'>
+                            <DropdownItem>驴打滚</DropdownItem>
+                            <DropdownItem>炸酱面</DropdownItem>
+                            <DropdownItem disabled>豆汁儿</DropdownItem>
+                            <DropdownItem>冰糖葫芦</DropdownItem>
+                            <DropdownItem divided>北京烤鸭</DropdownItem>
+                        </DropdownMenu>
+                    </Dropdown>
                     <p slot="content">冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组1-冷冻一次泵开启台数反馈冷冻一次泵组</p>
                 </Panel>
             </Collapse>
@@ -95,329 +108,89 @@
     </div>
 </template>
 <script>
-import echarts from 'echarts'
-    export default {
-        data () {
-            return {
-                value1: [1,2,3],
-                value3: 0,
-                setting: {
-                    autoplay: false,
-                    autoplaySpeed: 2000,
-                    dots: 'inside',
-                    radiusDot: true,
-                    trigger: 'click',
-                    arrow: 'hover'
-                },
-                option :{
-                    backgroundColor: 'rgb(43, 51, 59)',
-                    toolbox: {
-                        show: true,
-                        feature: {
-                            mark: {
-                                show: true
-                            },
-                            dataView: {
-                                show: true,
-                                readOnly: false
-                            },
-                            magicType: {
-                                show: true,
-                                type: ['pie', 'funnel']
-                            },
-                            restore: {
-                                show: true
-                            },
-                            saveAsImage: {
-                                show: true
-                            }
-                        }
-                    },
-                    calculable: true,
-                    "tooltip": {
-                        "trigger": "item",
-                        "formatter": "{a}<br/>{b}:{c}千万元"
-                    },
-                    "title": {
-                        "text": "南丁格尔玫瑰图--PieHalfRose",
-                        "left": "center",
-                        "top": 20,
-                        "textStyle": {
-                            "color": "#ccc"
-                        }
-                    },
-                    // "calculable": true,
-                    "legend": {
-                        "icon": "circle",
-                        "x": "center",
-                        "y": "15%",
-                        "data": [
-                            "义乌市1",
-                            "义乌市2",
-                            "义乌市3",
-                            "义乌市4",
-                            "义乌市5",
-                            "义乌市6",
-                            "义乌市7",
-                            "义乌市8",
-                            "义乌市9"
-                        ],
-                        "textStyle": {
-                            "color": "#fff"
-                        }
-                    },
-                    "series": [{
-                        "name": "XX线索",
-                        "type": "pie",
-                        "radius": [
-                            37,
-                            155
-                        ],
-                        "avoidLabelOverlap": false,
-                        "startAngle": 0,
-                        "center": [
-                            "50.1%",
-                            "34%"
-                        ],
-                        "roseType": "area",
-                        "selectedMode": "single",
-                        "label": {
-                            "normal": {
-                                "show": true,
-                                "formatter": "{c}千万元"
-                            },
-                            "emphasis": {
-                                "show": true
-                            }
-                        },
-                        "labelLine": {
-                            "normal": {
-                                "show": true,
-                                "smooth": false,
-                                "length": 20,
-                                "length2": 10
-                            },
-                            "emphasis": {
-                                "show": true
-                            }
-                        },
-                        "data": [{
-                                "value": 600.58,
-                                "name": "义乌市1",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#f845f1"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1100.58,
-                                "name": "义乌市2",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#ad46f3"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1200.58,
-                                "name": "义乌市3",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#5045f6"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1300.58,
-                                "name": "义乌市4",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#4777f5"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1400.58,
-                                "name": "义乌市5",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#44aff0"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1500.58,
-                                "name": "义乌市6",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#45dbf7"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1500.58,
-                                "name": "义乌市7",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#f6d54a"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1600.58,
-                                "name": "义乌市8",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#f69846"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 1800,
-                                "name": "义乌市9",
-                                "itemStyle": {
-                                    "normal": {
-                                        "color": "#ff4343"
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            },
-                            {
-                                "value": 0,
-                                "name": "",
-                                "itemStyle": {
-                                    "normal": {
-                                        "label": {
-                                            "show": false
-                                        },
-                                        "labelLine": {
-                                            "show": false
-                                        }
-                                    }
-                                }
-                            }
-                        ]
-                    }]
-                },
-            }
+import echarts from "echarts";
+export default {
+  data() {
+    return {
+      value1: [1, 2, 3],
+      value3: 0,
+      setting: {
+        autoplay: false,
+        autoplaySpeed: 2000,
+        dots: "inside",
+        radiusDot: true,
+        trigger: "click",
+        arrow: "hover"
+      },
+      option: {
+        tooltip: {
+          trigger: "item",
+          formatter: "{a} <br/>{b}: {c} ({d}%)"
         },
-        mounted(){
-            var myChart = echarts.init(document.getElementById("pie1"));
-            myChart.setOption(this.option);
-        }
-    }
+        legend: {
+          orient: "vertical",
+          x: "left",
+          data: [
+            "直达",
+            "营销广告",
+            "搜索引擎",
+            "邮件营销",
+            "联盟广告",
+            "视频广告",
+            "百度",
+            "谷歌",
+            "必应",
+            "其他"
+          ]
+        },
+        series: [
+          {
+            name: "访问来源",
+            type: "pie",
+            selectedMode: "single",
+            radius: [0, "30%"],
+
+            label: {
+              normal: {
+                position: "inner"
+              }
+            },
+            labelLine: {
+              normal: {
+                show: false
+              }
+            },
+            data: [
+              { value: 335, name: "直达", selected: true },
+              { value: 679, name: "营销广告" },
+              { value: 1548, name: "搜索引擎" }
+            ]
+          },
+          {
+            name: "访问来源",
+            type: "pie",
+            radius: ["40%", "55%"],
+
+            data: [
+              { value: 335, name: "直达" },
+              { value: 310, name: "邮件营销" },
+              { value: 234, name: "联盟广告" },
+              { value: 135, name: "视频广告" },
+              { value: 1048, name: "百度" },
+              { value: 251, name: "谷歌" },
+              { value: 147, name: "必应" },
+              { value: 102, name: "其他" }
+            ]
+          }
+        ]
+      }
+    };
+  },
+  mounted() {
+    var myChart = echarts.init(document.getElementById("pie1"));
+    myChart.setOption(this.option);
+  }
+};
 </script>
 <style scoped>
 .blue,

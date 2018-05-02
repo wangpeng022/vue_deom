@@ -15,12 +15,16 @@
                         <span>工作工作</span>
                     </MenuItem>
                     <MenuItem name="core">
-                        <Icon type="settings"></Icon>
+                        <Icon type="ios-medical-outline"></Icon>
                         <span>冷站冷站</span>
                     </MenuItem>
                     <MenuItem name="note">
                         <Icon type="ios-paper"></Icon>
                         <span>工作日记</span>
+                    </MenuItem>
+                    <MenuItem name="custom">
+                        <Icon type="settings"></Icon>
+                        <span>定制定制</span>
                     </MenuItem>
                 </Menu>
             </Sider>

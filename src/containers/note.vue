@@ -1,11 +1,15 @@
 <template>
-    <div>
+    <div class='list'>
         <Col span='6'>
-            <Button @click="addT">增加</Button>
-            <Button type="ghost" @click="deleteT">删除</Button>
+            <Button @click="addT">添加</Button>
+            <Button type="ghost" @click.native="deleteT">删除</Button>
             <br/>
             <ul>
-                <li v-for="(item,index) in notes" :key="index">{{item.text}}</li>
+                <a v-for="(item,index) in notes" :key="index" :class="{active: activeNote === item}" @click="select(item)" href="#">
+                    <h4>
+                        {{item.text}}
+                    </h4>
+                </a>
             </ul>
         </Col>
         <Col span='6'>
@@ -29,14 +33,26 @@
             ...mapState(["notes", "activeNote"])
         },
         methods: {
-            ...mapActions(["addT", "deleteT"]),
-            aa(index){
-                console.log(index);
-
-            }
+            ...mapActions(["addT", "deleteT","select"]),
+        //     aa(item){
+        //         this.select(item);
+        //     }
         }
     }
 </script>
 <style scoped>
-
+    .list ul{
+        margin: 10px;
+    }
+    .list ul a{
+        display: inline-block;
+        width: 100%;
+        height: 30px;
+        line-height: 30px;
+        color: #666;
+        padding: 0 5px;
+    }
+    .active{
+        background: lightblue;
+    }
 </style>

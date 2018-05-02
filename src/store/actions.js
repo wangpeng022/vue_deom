@@ -8,5 +8,8 @@ export default {
     commit
   }) {
     commit("DELETE_T")
+  },
+  select({commit},item) {
+    commit("select",item)
   }
 }

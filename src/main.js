@@ -8,6 +8,7 @@ import iview from 'iview'
 import 'iview/dist/styles/iview.css'
 import axios from 'axios';
 import store from './store/index.js'
+import './mytheme/index.less'
 
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 Vue.prototype.$axios = axios;

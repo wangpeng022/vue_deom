@@ -4,6 +4,7 @@ import home from '@/containers/home.vue'
 import core from '@/containers/core.vue'
 import work from '@/containers/work.vue'
 import note from '@/containers/note.vue'
+import custom from '@/containers/iview-custom.vue'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/note',
       name: 'note',
       component: note
+    },
+    {
+      path: '/custom',
+      name: 'custom',
+      component: custom
     },
     {
       path: '*',

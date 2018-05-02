@@ -6,9 +6,13 @@ import actions from './actions'
 Vue.use(Vuex)
 
 const state = {
-  num:'',
-  notes: [],
-  activeNote: {}
+  num: 0,
+  notes: [{
+      text: '新建文本',
+      favorite: false
+    }],
+  activeNote: {},
+  curIndex:'',
 }
 
 const getters = {
