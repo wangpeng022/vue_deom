@@ -108,6 +108,7 @@
     </div>
 </template>
 <script>
+import {getCookie} from '../../static/js/cookie'
 import echarts from "echarts";
 export default {
   data() {
@@ -187,8 +188,13 @@ export default {
     };
   },
   mounted() {
-    var myChart = echarts.init(document.getElementById("pie1"));
-    myChart.setOption(this.option);
+    //  if (getCookie("admin")=='') {
+    //      this.$router.push("login")
+    //  }else{
+        var myChart = echarts.init(document.getElementById("pie1"));
+        myChart.setOption(this.option);
+    //  }
+
   }
 };
 </script>

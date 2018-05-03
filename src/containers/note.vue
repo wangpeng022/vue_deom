@@ -3,12 +3,14 @@
         <Col span='6'>
             <Button @click="addT">添加</Button>
             <Button type="ghost" @click.native="deleteT">删除</Button>
+            <Button type="ghost" @click.native="favour">收藏</Button>
             <br/>
             <ul>
                 <a v-for="(item,index) in notes" :key="index" :class="{active: activeNote === item}" @click="select(item)" href="#">
                     <h4>
                         {{item.text}}
                     </h4>
+                    <Icon v-if="item.favorite" type="star" size="18" color="#F56A00" style="float:right;marginTop:5px"></Icon>
                 </a>
             </ul>
         </Col>
@@ -33,7 +35,7 @@
             ...mapState(["notes", "activeNote"])
         },
         methods: {
-            ...mapActions(["addT", "deleteT","select"]),
+            ...mapActions(["addT", "deleteT","select","favour"]),
         //     aa(item){
         //         this.select(item);
         //     }
@@ -51,6 +53,10 @@
         line-height: 30px;
         color: #666;
         padding: 0 5px;
+    }
+    .list ul a h4{
+        width: 60%;
+        display: inline-block;
     }
     .active{
         background: lightblue;

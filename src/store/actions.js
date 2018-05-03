@@ -11,5 +11,8 @@ export default {
   },
   select({commit},item) {
     commit("select",item)
+  },
+  favour({commit}){
+    commit("favour")
   }
 }

@@ -10,11 +10,16 @@ export default {
   },
   DELETE_T(state) {
     var index = state.notes.indexOf(state.activeNote)
+    if (index>=0) {
     state.notes.splice(index,1);
-    state.activeNote =index>0? state.notes[index-1]: index=0? state.notes[0]:{};
+    state.activeNote =index>0? state.notes[index-1]: index==0? state.notes[0]||{}:{};
+    }
   },
   select(state,item){
     // console.log(state,item);
     state.activeNote = item;
+  },
+  favour(state){
+    state.activeNote.favorite = !state.activeNote.favorite;
   }
 }

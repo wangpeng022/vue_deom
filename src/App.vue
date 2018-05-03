@@ -33,7 +33,9 @@
                     <Icon @click.native="collapsedSider" :class="rotateIcon" :style="{margin: '20px 20px 0'}" type="navicon-round" size="24"></Icon>
                     <div class="demo-avatar" style="float:right;marginRight:20px">
                         <Avatar :style="{background: color}">{{ user }}</Avatar>
-                        <Button size="small" @click="handleChange2">Change</Button>
+                        <!-- <Button size="small" @click="handleChange2">Change</Button> -->
+                        <span>admin</span>
+                        <Button size="small" @click.native="clear">退出登录</Button>
                     </div>
                 </Header>
                 <Content :style="{marginRight: '20px',  minHeight: '260px'}">
@@ -46,6 +48,7 @@
 <script>
     const UserList = ['U', 'Lucy', 'Tom', 'Edward'];
     const ColorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
+    import {delCookie} from '../static/js/cookie'
     export default {
         data () {
             return {
@@ -79,6 +82,10 @@
                 const index = UserList.indexOf(this.user);
                 this.user = index < UserList.length - 1 ? UserList[index + 1] : UserList[0];
                 this.color = index < ColorList.length - 1 ? ColorList[index + 1] : ColorList[0];
+            },
+            clear(){
+                delCookie('admin');
+                this.$router.push("/login");
             }
         }
     }
