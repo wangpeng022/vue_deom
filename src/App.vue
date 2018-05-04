@@ -34,7 +34,7 @@
                     <div class="demo-avatar" style="float:right;marginRight:20px">
                         <Avatar :style="{background: color}">{{ user }}</Avatar>
                         <!-- <Button size="small" @click="handleChange2">Change</Button> -->
-                        <span>admin</span>
+                        <span v-text="this.username!=undefined?this.username:''"></span>
                         <Button size="small" @click.native="clear">退出登录</Button>
                     </div>
                 </Header>
@@ -49,6 +49,8 @@
     const UserList = ['U', 'Lucy', 'Tom', 'Edward'];
     const ColorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
     import {delCookie} from '../static/js/cookie'
+    import { mapState } from 'vuex';
+    import core from './containers/core.vue'
     export default {
         data () {
             return {
@@ -58,6 +60,7 @@
             }
         },
         computed: {
+            ...mapState(["username"]),
             rotateIcon () {
                 return [
                     'menu-icon',
@@ -87,6 +90,9 @@
                 delCookie('admin');
                 this.$router.push("/login");
             }
+        },
+        components: {
+            core
         }
     }
 </script>

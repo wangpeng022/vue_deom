@@ -6,6 +6,7 @@ import actions from './actions'
 Vue.use(Vuex)
 
 const state = {
+  username: '',
   num: 0,
   notes: [{
       text: '新建文本',
